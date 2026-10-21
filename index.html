@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1a1412"><title>Family Movie Night</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>🍿 Family Movie Night</h1><p class="sub">Grab a blanket. Subtitles on.</p>
+<a class="watch" href="http://100.113.130.66:8096">▶ Watch Now</a>
+<h2>Setup guide</h2>
+<div class="tabs" role="tablist"><button class="tab" role="tab" data-t="android" aria-selected="true">Android</button><button class="tab" role="tab" data-t="iphone" aria-selected="false">iPhone</button></div>
+<ol id="android">
+<li><label><input type="checkbox" data-k="a1"><span><b>Get your invites</b><br>Look for the invite email from Tailscale, and get a Jellyfin username and password from the owner.</span></label></li>
+<li><label><input type="checkbox" data-k="a2"><span><b>Install Tailscale</b></span></label><a class="btn" href="https://play.google.com/store/apps/details?id=com.tailscale.ipn" target="_blank" rel="noopener">Get Tailscale</a></li>
+<li><label><input type="checkbox" data-k="a3"><span><b>Turn on Tailscale</b><br>Open Tailscale, sign in with the invited account, allow the VPN permission, and switch it ON.</span></label></li>
+<li><label><input type="checkbox" data-k="a4"><span><b>Install Jellyfin</b></span></label><a class="btn" href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank" rel="noopener">Get Jellyfin</a></li>
+<li><label><input type="checkbox" data-k="a5"><span><b>Connect to the server</b><br>Open Jellyfin, enter this server address, then sign in:</span></label><p><code>http://100.113.130.66:8096</code></p><button class="btn copy" type="button">Copy address</button></li>
+<li><label><input type="checkbox" data-k="a6"><span><b>Turn on subtitles</b><br>In Jellyfin tap the profile icon &gt; Settings &gt; Subtitles. Set Language to <b>English</b> and mode to <b>Always</b>.<br><span class="note">The owner is deaf, so captions matter. English SDH subtitles are available.</span></span></label></li>
+<li><label><input type="checkbox" data-k="a7"><span><b>Optional: watch offline</b><br>Download a movie for offline viewing, and delete it when you're done. For better offline downloads try <b>Findroid</b> or Streamyfin.</span></label></li>
+<li><label><input type="checkbox" data-k="a8"><span><b>Troubleshooting</b><br>Make sure Tailscale is ON, check your internet, restart the app, then contact the owner.</span></label></li></ol><ol id="iphone" hidden>
+<li><label><input type="checkbox" data-k="i1"><span><b>Get your invites</b><br>Look for the invite email from Tailscale, and get a Jellyfin username and password from the owner.</span></label></li>
+<li><label><input type="checkbox" data-k="i2"><span><b>Install Tailscale</b></span></label><a class="btn" href="https://apps.apple.com/app/tailscale/id1470499037" target="_blank" rel="noopener">Get Tailscale</a></li>
+<li><label><input type="checkbox" data-k="i3"><span><b>Turn on Tailscale</b><br>Open Tailscale, sign in with the invited account, allow the VPN permission, and switch it ON.</span></label></li>
+<li><label><input type="checkbox" data-k="i4"><span><b>Install Jellyfin</b></span></label><a class="btn" href="https://apps.apple.com/app/jellyfin-mobile/id1480192618" target="_blank" rel="noopener">Get Jellyfin</a></li>
+<li><label><input type="checkbox" data-k="i5"><span><b>Connect to the server</b><br>Open Jellyfin, enter this server address, then sign in:</span></label><p><code>http://100.113.130.66:8096</code></p><button class="btn copy" type="button">Copy address</button></li>
+<li><label><input type="checkbox" data-k="i6"><span><b>Turn on subtitles</b><br>In Jellyfin tap the profile icon &gt; Settings &gt; Subtitles. Set Language to <b>English</b> and mode to <b>Always</b>.<br><span class="note">The owner is deaf, so captions matter. English SDH subtitles are available.</span></span></label></li>
+<li><label><input type="checkbox" data-k="i7"><span><b>Optional: watch offline</b><br>Download a movie for offline viewing, and delete it when you're done. For better offline downloads try <b>Streamyfin</b>.</span></label></li>
+<li><label><input type="checkbox" data-k="i8"><span><b>Troubleshooting</b><br>Make sure Tailscale is ON, check your internet, restart the app, then contact the owner.</span></label></li></ol>
+<button class="btn reset" type="button" id="reset">Reset checklist</button>
+<footer>Tailscale must be ON for Watch Now to work.</footer></main>
+<script>
+const tabs=document.querySelectorAll('.tab');function show(t){tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.t==t));['android','iphone'].forEach(id=>document.getElementById(id).hidden=id!=t);localStorage.setItem('fmn-tab',t)}
+tabs.forEach(b=>b.onclick=()=>show(b.dataset.t));show(localStorage.getItem('fmn-tab')||(/iPhone|iPad/.test(navigator.userAgent)?'iphone':'android'));
+document.querySelectorAll('input[data-k]').forEach(c=>{const k='fmn-'+c.dataset.k,li=c.closest('li');c.checked=localStorage.getItem(k)==='1';li.classList.toggle('done',c.checked);c.onchange=()=>{localStorage.setItem(k,c.checked?'1':'0');li.classList.toggle('done',c.checked)}});
+document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{const t='http://100.113.130.66:8096';try{await navigator.clipboard.writeText(t)}catch(e){const x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove()}b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy address',2000)});
+document.getElementById('reset').onclick=()=>{document.querySelectorAll('input[data-k]').forEach(c=>{c.checked=false;c.onchange()})};
+</script></body></html>
