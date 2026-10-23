@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="theme-color" content="#08110f">
+<title>Movie Night in the Shire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<article class="page">
+
+<figure class="painting hero"><img src="art/bauer-knight.jpg" width="900" height="865" alt="A knight on a horse in front of blue mountains, watercolor by John Bauer"></figure>
+<p class="eyebrow">Family movie night</p>
+<h1>Movie Night in the Shire</h1>
+<p class="lede">Movies and shows from my server, just for family.</p>
+
+<div class="flourish" aria-hidden="true"><span>✦</span></div>
+
+<div class="actions">
+  <a class="gate" href="http://server.tail2a39ff.ts.net:8096">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg>
+    <span class="gate-txt"><small>Open Jellyfin</small>Watch Now</span>
+  </a>
+  <a class="btn ghost wide" href="http://server.tail2a39ff.ts.net:8095/check.html" target="_blank" rel="noopener">✦ Check my connection</a>
+</div>
+
+<p class="scroll"><b>Invite only.</b> Ask me for an invite first. <b>Tailscale has to be ON</b> or nothing works. If the connection check page turns green, you're good.</p>
+
+<figure class="painting banner"><img src="art/bauer-cottage.jpg" width="1100" height="554" alt="A small cottage with lit windows at the foot of a dark mountain, by John Bauer" loading="lazy"></figure>
+
+<h2>How to Set It Up</h2>
+<p class="h2-sub">8 quick steps. Check them off as you go.</p>
+
+<div class="tabs" role="tablist" aria-label="Pick your phone">
+  <button class="tab" role="tab" data-t="android" aria-selected="true">Android</button>
+  <button class="tab" role="tab" data-t="iphone" aria-selected="false">iPhone</button>
+</div>
+
+<div class="progress" aria-live="polite"><span id="pct">0 of 8</span><span class="bar"><i id="bar"></i></span></div>
+
+<ol class="steps" id="android">
+  <li><label><input type="checkbox" data-k="a1"><span class="txt"><span class="title">Get your invite</span>Text me and ask for an invite. Tell me the email you want to use for Tailscale. I'll send you a Tailscale invite and a Jellyfin login. You need both before the rest works.</span></label></li>
+  <li><label><input type="checkbox" data-k="a2"><span class="txt"><span class="title">Install Tailscale</span>Tailscale is what connects you to my server.</span></label>
+    <div class="more"><a class="btn" href="https://play.google.com/store/apps/details?id=com.tailscale.ipn" target="_blank" rel="noopener">Get Tailscale</a></div></li>
+  <li><label><input type="checkbox" data-k="a3"><span class="txt"><span class="title">Turn Tailscale on</span>Open Tailscale, sign in with the email you gave me, allow the VPN, and turn it <b>ON</b>.</span></label></li>
+  <li><label><input type="checkbox" data-k="a4"><span class="txt"><span class="title">Install Jellyfin</span>Jellyfin is the app you watch in.</span></label>
+    <div class="more"><a class="btn" href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank" rel="noopener">Get Jellyfin</a></div></li>
+  <li><label><input type="checkbox" data-k="a5"><span class="txt"><span class="title">Add my server</span>Open Jellyfin, type in this address, then sign in:</span></label>
+    <div class="more"><img class="step-art" src="art/bauer-gate.jpg" width="520" height="502" alt="A big wooden door in a mountain wall, by John Bauer" loading="lazy">
+    <p><code>http://server.tail2a39ff.ts.net:8096</code></p>
+    <button class="btn copy" type="button">Copy address</button>
+    <p class="scroll">Not working? Open Tailscale, look at the number under <b>server</b>, and type <code>http://THAT-NUMBER:8096</code> instead.</p></div></li>
+  <li><label><input type="checkbox" data-k="a6"><span class="txt"><span class="title">Turn on subtitles</span>In Jellyfin tap your profile picture, then Settings, then Subtitles. Set language to <b>English</b> and mode to <b>Always</b>. I'm deaf, so captions are a big deal to me. English SDH subs are available.</span></label></li>
+  <li><label><input type="checkbox" data-k="a7"><span class="txt"><span class="title">Download for later <em>(optional)</em></span>You can download a movie to watch without internet. Delete it when you're done. For better downloads try <b>Findroid</b> or <b>Streamyfin</b>.</span></label></li>
+  <li><label><input type="checkbox" data-k="a8"><span class="txt"><span class="title">If it stops working</span>Tap <b>Check my connection</b> up top. Make sure Tailscale is ON, check your internet, and restart the app. Still stuck? Text me.</span></label></li>
+</ol>
+
+<ol class="steps" id="iphone" hidden>
+  <li><label><input type="checkbox" data-k="i1"><span class="txt"><span class="title">Get your invite</span>Text me and ask for an invite. Tell me the email you want to use for Tailscale. I'll send you a Tailscale invite and a Jellyfin login. You need both before the rest works.</span></label></li>
+  <li><label><input type="checkbox" data-k="i2"><span class="txt"><span class="title">Install Tailscale</span>Tailscale is what connects you to my server.</span></label>
+    <div class="more"><a class="btn" href="https://apps.apple.com/app/tailscale/id1470499037" target="_blank" rel="noopener">Get Tailscale</a></div></li>
+  <li><label><input type="checkbox" data-k="i3"><span class="txt"><span class="title">Turn Tailscale on</span>Open Tailscale, sign in with the email you gave me, allow the VPN, and turn it <b>ON</b>.</span></label></li>
+  <li><label><input type="checkbox" data-k="i4"><span class="txt"><span class="title">Install Jellyfin</span>Jellyfin is the app you watch in.</span></label>
+    <div class="more"><a class="btn" href="https://apps.apple.com/app/jellyfin-mobile/id1480192618" target="_blank" rel="noopener">Get Jellyfin</a></div></li>
+  <li><label><input type="checkbox" data-k="i5"><span class="txt"><span class="title">Add my server</span>Open Jellyfin, type in this address, then sign in:</span></label>
+    <div class="more"><img class="step-art" src="art/bauer-gate.jpg" width="520" height="502" alt="A big wooden door in a mountain wall, by John Bauer" loading="lazy">
+    <p><code>http://server.tail2a39ff.ts.net:8096</code></p>
+    <button class="btn copy" type="button">Copy address</button>
+    <p class="scroll">Not working? Open Tailscale, look at the number under <b>server</b>, and type <code>http://THAT-NUMBER:8096</code> instead.</p></div></li>
+  <li><label><input type="checkbox" data-k="i6"><span class="txt"><span class="title">Turn on subtitles</span>In Jellyfin tap your profile picture, then Settings, then Subtitles. Set language to <b>English</b> and mode to <b>Always</b>. I'm deaf, so captions are a big deal to me. English SDH subs are available.</span></label></li>
+  <li><label><input type="checkbox" data-k="i7"><span class="txt"><span class="title">Download for later <em>(optional)</em></span>You can download a movie to watch without internet. Delete it when you're done. For better downloads try <b>Streamyfin</b>.</span></label></li>
+  <li><label><input type="checkbox" data-k="i8"><span class="txt"><span class="title">If it stops working</span>Tap <b>Check my connection</b> up top. Make sure Tailscale is ON, check your internet, and restart the app. Still stuck? Text me.</span></label></li>
+</ol>
+
+<button class="btn ghost wide" type="button" id="reset">Reset checklist</button>
+
+<footer>
+<img class="foot-art" src="art/bauer-tuvstarr.jpg" width="516" height="520" alt="A girl kneeling by a dark forest pool, by John Bauer" loading="lazy">
+<span class="rune">✦ ✦ ✦</span>Tailscale has to be ON for Watch Now to work. Enjoy the movies!
+<p class="credits">Paintings by John Bauer (Swedish, died 1918), public domain, via Wikimedia Commons:
+<a href="https://commons.wikimedia.org/wiki/File:En_riddare_red_fram_(A_knight_rode_on)_by_John_Bauer.jpg">A knight rode on</a> &middot;
+<a href="https://commons.wikimedia.org/wiki/File:John_Bauer-Stugan_vid_bergets_fot.jpg">The cottage at the foot of the mountain</a> &middot;
+<a href="https://commons.wikimedia.org/wiki/File:Bergaporten_by_John_Bauer_1918.jpg">The mountain gate</a> &middot;
+<a href="https://commons.wikimedia.org/wiki/File:John_Bauer_-_Princess_Tuvstarr_gazing_down_into_the_dark_waters_of_the_forest_tarn._-_Google_Art_Project.jpg">Princess Tuvstarr at the forest pool</a></p>
+</footer>
+</article>
+</main>
+<script>
+const ADDR='http://server.tail2a39ff.ts.net:8096';
+const tabs=document.querySelectorAll('.tab');
+function current(){return document.querySelector('ol.steps:not([hidden])')}
+function progress(){
+  const boxes=current().querySelectorAll('input[data-k]'),n=[...boxes].filter(c=>c.checked).length;
+  document.getElementById('pct').textContent=n+' of '+boxes.length;
+  document.getElementById('bar').style.width=(100*n/boxes.length)+'%';
+}
+function show(t){
+  tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.t===t));
+  ['android','iphone'].forEach(id=>document.getElementById(id).hidden=id!==t);
+  try{localStorage.setItem('fmn-tab',t)}catch(e){}
+  progress();
+}
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+tabs.forEach(b=>b.onclick=()=>show(b.dataset.t));
+document.querySelectorAll('input[data-k]').forEach(c=>{
+  const k='fmn-'+c.dataset.k,li=c.closest('li');
+  c.checked=get(k)==='1';li.classList.toggle('done',c.checked);
+  c.onchange=()=>{set(k,c.checked?'1':'0');li.classList.toggle('done',c.checked);progress()};
+});
+show(get('fmn-tab')||(/iPhone|iPad/.test(navigator.userAgent)?'iphone':'android'));
+document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{
+  try{await navigator.clipboard.writeText(ADDR)}catch(e){const x=document.createElement('textarea');x.value=ADDR;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove()}
+  b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy address',2000);
+});
+document.getElementById('reset').onclick=()=>{document.querySelectorAll('input[data-k]').forEach(c=>{c.checked=false;c.onchange()})};
+</script>
+</body>
+</html>
