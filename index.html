@@ -15,29 +15,35 @@
 <main>
 <article class="page">
 
-<figure class="painting hero"><img src="art/shire-night.png" width="1600" height="900" alt="The Shire at night with glowing homes under a full moon"></figure>
-<p class="eyebrow">Family movie night</p>
-<h1>Movie Night in the Shire</h1>
-<p class="lede">Movies and shows from my server, just for family.</p>
+<nav class="lang-switch" data-i18n-aria="langLabel" aria-label="Language">
+  <button type="button" data-lang="en" aria-pressed="true">English</button>
+  <span class="sep" aria-hidden="true">|</span>
+  <button type="button" data-lang="es" aria-pressed="false">Español</button>
+</nav>
+
+<figure class="painting hero"><img src="art/shire-night.png" width="1600" height="900" data-i18n-alt="altHero" alt="The Shire at night with glowing homes under a full moon"></figure>
+<p class="eyebrow" data-i18n="eyebrow">Family movie night</p>
+<h1 data-i18n="h1">Movie Night in the Shire</h1>
+<p class="lede" data-i18n="lede">Movies and shows from my server, just for family.</p>
 
 <div class="flourish" aria-hidden="true"><span>✦</span></div>
 
 <div class="actions">
   <a class="gate" href="http://server.tail2a39ff.ts.net:8096">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg>
-    <span class="gate-txt"><small>Open Jellyfin</small>Watch Now</span>
+    <span class="gate-txt"><small data-i18n="openJellyfin">Open Jellyfin</small><span data-i18n="watchNow">Watch Now</span></span>
   </a>
-  <a class="btn ghost wide" href="http://server.tail2a39ff.ts.net:8095/check.html" target="_blank" rel="noopener">✦ Check my connection</a>
+  <a class="btn ghost wide" href="http://server.tail2a39ff.ts.net:8095/check.html" target="_blank" rel="noopener">✦ <span data-i18n="checkBtn">Check my connection</span></a>
 </div>
 
-<p class="scroll"><b>Invite only.</b> Ask me for an invite first. <b>Tailscale has to be ON</b> or nothing works. If the connection check page turns green, you're good.</p>
+<p class="scroll" data-i18n="inviteNote"><b>Invite only.</b> Ask me for an invite first. <b>Tailscale has to be ON</b> or nothing works. If the connection check page turns green, you're good.</p>
 
-<figure class="painting banner"><img src="art/bauer-cottage.jpg" width="1100" height="554" alt="A small cottage with lit windows at the foot of a dark mountain, by John Bauer" loading="lazy"></figure>
+<figure class="painting banner"><img src="art/bauer-cottage.jpg" width="1100" height="554" data-i18n-alt="altCottage" alt="A small cottage with lit windows at the foot of a dark mountain, by John Bauer" loading="lazy"></figure>
 
-<h2>How to Set It Up</h2>
-<p class="h2-sub">8 quick steps. Check them off as you go.</p>
+<h2 data-i18n="h2">How to Set It Up</h2>
+<p class="h2-sub" data-i18n="h2sub">8 quick steps. Check them off as you go.</p>
 
-<div class="tabs" role="tablist" aria-label="Pick your phone">
+<div class="tabs" role="tablist" data-i18n-aria="tabsLabel" aria-label="Pick your phone">
   <button class="tab" role="tab" data-t="android" aria-selected="true">Android</button>
   <button class="tab" role="tab" data-t="iphone" aria-selected="false">iPhone</button>
 </div>
@@ -45,45 +51,45 @@
 <div class="progress" aria-live="polite"><span id="pct">0 of 8</span><span class="bar"><i id="bar"></i></span></div>
 
 <ol class="steps" id="android">
-  <li><label><input type="checkbox" data-k="a1"><span class="txt"><span class="title">Get your invite</span>Text me and ask for an invite. Tell me the email you want to use for Tailscale. I'll send you a Tailscale invite and a Jellyfin login. You need both before the rest works.</span></label></li>
-  <li><label><input type="checkbox" data-k="a2"><span class="txt"><span class="title">Install Tailscale</span>Tailscale is what connects you to my server.</span></label>
-    <div class="more"><a class="btn" href="https://play.google.com/store/apps/details?id=com.tailscale.ipn" target="_blank" rel="noopener">Get Tailscale</a></div></li>
-  <li><label><input type="checkbox" data-k="a3"><span class="txt"><span class="title">Turn Tailscale on</span>Open Tailscale, sign in with the email you gave me, allow the VPN, and turn it <b>ON</b>.</span></label></li>
-  <li><label><input type="checkbox" data-k="a4"><span class="txt"><span class="title">Install Jellyfin</span>Jellyfin is the app you watch in.</span></label>
-    <div class="more"><a class="btn" href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank" rel="noopener">Get Jellyfin</a></div></li>
-  <li><label><input type="checkbox" data-k="a5"><span class="txt"><span class="title">Add my server</span>Open Jellyfin, type in this address, then sign in:</span></label>
-    <div class="more"><img class="step-art" src="art/bauer-gate.jpg" width="520" height="502" alt="A big wooden door in a mountain wall, by John Bauer" loading="lazy">
+  <li><label><input type="checkbox" data-k="a1"><span class="txt"><span class="title" data-i18n="s1t">Get your invite</span><span data-i18n="s1b">Text me and ask for an invite. Tell me the email you want to use for Tailscale. I'll send you a Tailscale invite and a Jellyfin login. You need both before the rest works.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="a2"><span class="txt"><span class="title" data-i18n="s2t">Install Tailscale</span><span data-i18n="s2b">Tailscale is what connects you to my server.</span></span></label>
+    <div class="more"><a class="btn" href="https://play.google.com/store/apps/details?id=com.tailscale.ipn" target="_blank" rel="noopener" data-i18n="getTailscale">Get Tailscale</a></div></li>
+  <li><label><input type="checkbox" data-k="a3"><span class="txt"><span class="title" data-i18n="s3t">Turn Tailscale on</span><span data-i18n="s3b">Open Tailscale, sign in with the email you gave me, allow the VPN, and turn it <b>ON</b>.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="a4"><span class="txt"><span class="title" data-i18n="s4t">Install Jellyfin</span><span data-i18n="s4b">Jellyfin is the app you watch in.</span></span></label>
+    <div class="more"><a class="btn" href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank" rel="noopener" data-i18n="getJellyfin">Get Jellyfin</a></div></li>
+  <li><label><input type="checkbox" data-k="a5"><span class="txt"><span class="title" data-i18n="s5t">Add my server</span><span data-i18n="s5b">Open Jellyfin, type in this address, then sign in:</span></span></label>
+    <div class="more"><img class="step-art" src="art/bauer-gate.jpg" width="520" height="502" data-i18n-alt="altGate" alt="A big wooden door in a mountain wall, by John Bauer" loading="lazy">
     <p><code>http://server.tail2a39ff.ts.net:8096</code></p>
-    <button class="btn copy" type="button">Copy address</button>
-    <p class="scroll">Not working? Open Tailscale, look at the number under <b>server</b>, and type <code>http://THAT-NUMBER:8096</code> instead.</p></div></li>
-  <li><label><input type="checkbox" data-k="a6"><span class="txt"><span class="title">Turn on subtitles</span>In Jellyfin tap your profile picture, then Settings, then Subtitles. Set language to <b>English</b> and mode to <b>Always</b>. I'm deaf, so captions are a big deal to me. English SDH subs are available.</span></label></li>
-  <li><label><input type="checkbox" data-k="a7"><span class="txt"><span class="title">Download for later <em>(optional)</em></span>You can download a movie to watch without internet. Delete it when you're done. For better downloads try <b>Findroid</b> or <b>Streamyfin</b>.</span></label></li>
-  <li><label><input type="checkbox" data-k="a8"><span class="txt"><span class="title">If it stops working</span>Tap <b>Check my connection</b> up top. Make sure Tailscale is ON, check your internet, and restart the app. Still stuck? Text me.</span></label></li>
+    <button class="btn copy" type="button" data-i18n="copy">Copy address</button>
+    <p class="scroll" data-i18n="s5note">Not working? Open Tailscale, look at the number under <b>server</b>, and type <code>http://THAT-NUMBER:8096</code> instead.</p></div></li>
+  <li><label><input type="checkbox" data-k="a6"><span class="txt"><span class="title" data-i18n="s6t">Turn on subtitles</span><span data-i18n="s6b">In Jellyfin tap your profile picture, then Settings, then Subtitles. Set language to <b>English</b> and mode to <b>Always</b>. I'm deaf, so captions are a big deal to me. English SDH subs are available.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="a7"><span class="txt"><span class="title" data-i18n="s7t">Download for later <em>(optional)</em></span><span data-i18n="s7bAndroid">You can download a movie to watch without internet. Delete it when you're done. For better downloads try <b>Findroid</b> or <b>Streamyfin</b>.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="a8"><span class="txt"><span class="title" data-i18n="s8t">If it stops working</span><span data-i18n="s8b">Tap <b>Check my connection</b> up top. Make sure Tailscale is ON, check your internet, and restart the app. Still stuck? Text me.</span></span></label></li>
 </ol>
 
 <ol class="steps" id="iphone" hidden>
-  <li><label><input type="checkbox" data-k="i1"><span class="txt"><span class="title">Get your invite</span>Text me and ask for an invite. Tell me the email you want to use for Tailscale. I'll send you a Tailscale invite and a Jellyfin login. You need both before the rest works.</span></label></li>
-  <li><label><input type="checkbox" data-k="i2"><span class="txt"><span class="title">Install Tailscale</span>Tailscale is what connects you to my server.</span></label>
-    <div class="more"><a class="btn" href="https://apps.apple.com/app/tailscale/id1470499037" target="_blank" rel="noopener">Get Tailscale</a></div></li>
-  <li><label><input type="checkbox" data-k="i3"><span class="txt"><span class="title">Turn Tailscale on</span>Open Tailscale, sign in with the email you gave me, allow the VPN, and turn it <b>ON</b>.</span></label></li>
-  <li><label><input type="checkbox" data-k="i4"><span class="txt"><span class="title">Install Jellyfin</span>Jellyfin is the app you watch in.</span></label>
-    <div class="more"><a class="btn" href="https://apps.apple.com/app/jellyfin-mobile/id1480192618" target="_blank" rel="noopener">Get Jellyfin</a></div></li>
-  <li><label><input type="checkbox" data-k="i5"><span class="txt"><span class="title">Add my server</span>Open Jellyfin, type in this address, then sign in:</span></label>
-    <div class="more"><img class="step-art" src="art/bauer-gate.jpg" width="520" height="502" alt="A big wooden door in a mountain wall, by John Bauer" loading="lazy">
+  <li><label><input type="checkbox" data-k="i1"><span class="txt"><span class="title" data-i18n="s1t">Get your invite</span><span data-i18n="s1b">Text me and ask for an invite. Tell me the email you want to use for Tailscale. I'll send you a Tailscale invite and a Jellyfin login. You need both before the rest works.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="i2"><span class="txt"><span class="title" data-i18n="s2t">Install Tailscale</span><span data-i18n="s2b">Tailscale is what connects you to my server.</span></span></label>
+    <div class="more"><a class="btn" href="https://apps.apple.com/app/tailscale/id1470499037" target="_blank" rel="noopener" data-i18n="getTailscale">Get Tailscale</a></div></li>
+  <li><label><input type="checkbox" data-k="i3"><span class="txt"><span class="title" data-i18n="s3t">Turn Tailscale on</span><span data-i18n="s3b">Open Tailscale, sign in with the email you gave me, allow the VPN, and turn it <b>ON</b>.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="i4"><span class="txt"><span class="title" data-i18n="s4t">Install Jellyfin</span><span data-i18n="s4b">Jellyfin is the app you watch in.</span></span></label>
+    <div class="more"><a class="btn" href="https://apps.apple.com/app/jellyfin-mobile/id1480192618" target="_blank" rel="noopener" data-i18n="getJellyfin">Get Jellyfin</a></div></li>
+  <li><label><input type="checkbox" data-k="i5"><span class="txt"><span class="title" data-i18n="s5t">Add my server</span><span data-i18n="s5b">Open Jellyfin, type in this address, then sign in:</span></span></label>
+    <div class="more"><img class="step-art" src="art/bauer-gate.jpg" width="520" height="502" data-i18n-alt="altGate" alt="A big wooden door in a mountain wall, by John Bauer" loading="lazy">
     <p><code>http://server.tail2a39ff.ts.net:8096</code></p>
-    <button class="btn copy" type="button">Copy address</button>
-    <p class="scroll">Not working? Open Tailscale, look at the number under <b>server</b>, and type <code>http://THAT-NUMBER:8096</code> instead.</p></div></li>
-  <li><label><input type="checkbox" data-k="i6"><span class="txt"><span class="title">Turn on subtitles</span>In Jellyfin tap your profile picture, then Settings, then Subtitles. Set language to <b>English</b> and mode to <b>Always</b>. I'm deaf, so captions are a big deal to me. English SDH subs are available.</span></label></li>
-  <li><label><input type="checkbox" data-k="i7"><span class="txt"><span class="title">Download for later <em>(optional)</em></span>You can download a movie to watch without internet. Delete it when you're done. For better downloads try <b>Streamyfin</b>.</span></label></li>
-  <li><label><input type="checkbox" data-k="i8"><span class="txt"><span class="title">If it stops working</span>Tap <b>Check my connection</b> up top. Make sure Tailscale is ON, check your internet, and restart the app. Still stuck? Text me.</span></label></li>
+    <button class="btn copy" type="button" data-i18n="copy">Copy address</button>
+    <p class="scroll" data-i18n="s5note">Not working? Open Tailscale, look at the number under <b>server</b>, and type <code>http://THAT-NUMBER:8096</code> instead.</p></div></li>
+  <li><label><input type="checkbox" data-k="i6"><span class="txt"><span class="title" data-i18n="s6t">Turn on subtitles</span><span data-i18n="s6b">In Jellyfin tap your profile picture, then Settings, then Subtitles. Set language to <b>English</b> and mode to <b>Always</b>. I'm deaf, so captions are a big deal to me. English SDH subs are available.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="i7"><span class="txt"><span class="title" data-i18n="s7t">Download for later <em>(optional)</em></span><span data-i18n="s7bIphone">You can download a movie to watch without internet. Delete it when you're done. For better downloads try <b>Streamyfin</b>.</span></span></label></li>
+  <li><label><input type="checkbox" data-k="i8"><span class="txt"><span class="title" data-i18n="s8t">If it stops working</span><span data-i18n="s8b">Tap <b>Check my connection</b> up top. Make sure Tailscale is ON, check your internet, and restart the app. Still stuck? Text me.</span></span></label></li>
 </ol>
 
-<button class="btn ghost wide" type="button" id="reset">Reset checklist</button>
+<button class="btn ghost wide" type="button" id="reset" data-i18n="reset">Reset checklist</button>
 
 <footer>
-<img class="foot-art" src="art/bauer-tuvstarr.jpg" width="516" height="520" alt="A girl kneeling by a dark forest pool, by John Bauer" loading="lazy">
-<span class="rune">✦ ✦ ✦</span>Tailscale has to be ON for Watch Now to work. Enjoy the movies!
-<p class="credits">Paintings by John Bauer (Swedish, died 1918), public domain, via Wikimedia Commons:
+<img class="foot-art" src="art/bauer-tuvstarr.jpg" width="516" height="520" data-i18n-alt="altTuvstarr" alt="A girl kneeling by a dark forest pool, by John Bauer" loading="lazy">
+<span class="rune">✦ ✦ ✦</span><span data-i18n="footer">Tailscale has to be ON for Watch Now to work. Enjoy the movies!</span>
+<p class="credits"><span data-i18n="creditsIntro">Paintings by John Bauer (Swedish, died 1918), public domain, via Wikimedia Commons:</span>
 <a href="https://commons.wikimedia.org/wiki/File:En_riddare_red_fram_(A_knight_rode_on)_by_John_Bauer.jpg">A knight rode on</a> &middot;
 <a href="https://commons.wikimedia.org/wiki/File:John_Bauer-Stugan_vid_bergets_fot.jpg">The cottage at the foot of the mountain</a> &middot;
 <a href="https://commons.wikimedia.org/wiki/File:Bergaporten_by_John_Bauer_1918.jpg">The mountain gate</a> &middot;
@@ -93,31 +99,143 @@
 </main>
 <script>
 const ADDR='http://server.tail2a39ff.ts.net:8096';
+const I18N={
+  en:{
+    title:'Movie Night in the Shire',
+    langLabel:'Language',
+    eyebrow:'Family movie night',
+    h1:'Movie Night in the Shire',
+    lede:'Movies and shows from my server, just for family.',
+    openJellyfin:'Open Jellyfin',
+    watchNow:'Watch Now',
+    checkBtn:'Check my connection',
+    inviteNote:'<b>Invite only.</b> Ask me for an invite first. <b>Tailscale has to be ON</b> or nothing works. If the connection check page turns green, you\'re good.',
+    h2:'How to Set It Up',
+    h2sub:'8 quick steps. Check them off as you go.',
+    tabsLabel:'Pick your phone',
+    progress:'{n} of {total}',
+    s1t:'Get your invite',
+    s1b:'Text me and ask for an invite. Tell me the email you want to use for Tailscale. I\'ll send you a Tailscale invite and a Jellyfin login. You need both before the rest works.',
+    s2t:'Install Tailscale',
+    s2b:'Tailscale is what connects you to my server.',
+    getTailscale:'Get Tailscale',
+    s3t:'Turn Tailscale on',
+    s3b:'Open Tailscale, sign in with the email you gave me, allow the VPN, and turn it <b>ON</b>.',
+    s4t:'Install Jellyfin',
+    s4b:'Jellyfin is the app you watch in.',
+    getJellyfin:'Get Jellyfin',
+    s5t:'Add my server',
+    s5b:'Open Jellyfin, type in this address, then sign in:',
+    copy:'Copy address',
+    copied:'Copied ✓',
+    s5note:'Not working? Open Tailscale, look at the number under <b>server</b>, and type <code>http://THAT-NUMBER:8096</code> instead.',
+    s6t:'Turn on subtitles',
+    s6b:'In Jellyfin tap your profile picture, then Settings, then Subtitles. Set language to <b>English</b> and mode to <b>Always</b>. I\'m deaf, so captions are a big deal to me. English SDH subs are available.',
+    s7t:'Download for later <em>(optional)</em>',
+    s7bAndroid:'You can download a movie to watch without internet. Delete it when you\'re done. For better downloads try <b>Findroid</b> or <b>Streamyfin</b>.',
+    s7bIphone:'You can download a movie to watch without internet. Delete it when you\'re done. For better downloads try <b>Streamyfin</b>.',
+    s8t:'If it stops working',
+    s8b:'Tap <b>Check my connection</b> up top. Make sure Tailscale is ON, check your internet, and restart the app. Still stuck? Text me.',
+    reset:'Reset checklist',
+    footer:'Tailscale has to be ON for Watch Now to work. Enjoy the movies!',
+    creditsIntro:'Paintings by John Bauer (Swedish, died 1918), public domain, via Wikimedia Commons:',
+    altHero:'The Shire at night with glowing homes under a full moon',
+    altCottage:'A small cottage with lit windows at the foot of a dark mountain, by John Bauer',
+    altGate:'A big wooden door in a mountain wall, by John Bauer',
+    altTuvstarr:'A girl kneeling by a dark forest pool, by John Bauer'
+  },
+  es:{
+    title:'Noche de cine en la Comarca',
+    langLabel:'Idioma',
+    eyebrow:'Noche de cine en familia',
+    h1:'Noche de cine en la Comarca',
+    lede:'Películas y series de mi servidor, solo para la familia.',
+    openJellyfin:'Abrir Jellyfin',
+    watchNow:'Ver ahora',
+    checkBtn:'Comprobar mi conexión',
+    inviteNote:'<b>Solo con invitación.</b> Pídeme una invitación primero. <b>Tailscale tiene que estar en ON</b> o no funciona nada. Si la página de comprobar la conexión se pone verde, ya estás listo.',
+    h2:'Cómo configurarlo',
+    h2sub:'Son 8 pasos cortos. Márcalos a medida que los completes.',
+    tabsLabel:'Elige tu teléfono',
+    progress:'{n} de {total}',
+    s1t:'Consigue tu invitación',
+    s1b:'Escríbeme y pídeme una invitación. Dime el correo que quieres usar para Tailscale. Te enviaré una invitación de Tailscale y tus datos para entrar a Jellyfin. Necesitas las dos cosas antes de seguir.',
+    s2t:'Instala Tailscale',
+    s2b:'Tailscale es lo que te conecta a mi servidor.',
+    getTailscale:'Descargar Tailscale',
+    s3t:'Enciende Tailscale',
+    s3b:'Abre Tailscale, pulsa Sign in con el correo que me diste, permite el VPN y ponlo en <b>ON</b>.',
+    s4t:'Instala Jellyfin',
+    s4b:'Jellyfin es la app donde vas a ver las películas.',
+    getJellyfin:'Descargar Jellyfin',
+    s5t:'Agrega mi servidor',
+    s5b:'Abre Jellyfin, escribe esta dirección y luego pulsa Sign in:',
+    copy:'Copiar dirección',
+    copied:'Copiado ✓',
+    s5note:'¿No funciona? Abre Tailscale, mira el número debajo de <b>server</b> y escribe <code>http://THAT-NUMBER:8096</code> en su lugar.',
+    s6t:'Activa los subtítulos',
+    s6b:'En Jellyfin toca tu foto de perfil, luego Settings, luego Subtitles. Pon el idioma en <b>English</b> y el modo en <b>Always</b>. Soy sordo, así que los subtítulos son muy importantes para mí. Hay subtítulos English SDH.',
+    s7t:'Descarga para más tarde <em>(opcional)</em>',
+    s7bAndroid:'Puedes descargar una película para verla sin internet. Bórrala cuando termines. Para mejores descargas, prueba <b>Findroid</b> o <b>Streamyfin</b>.',
+    s7bIphone:'Puedes descargar una película para verla sin internet. Bórrala cuando termines. Para mejores descargas, prueba <b>Streamyfin</b>.',
+    s8t:'Si deja de funcionar',
+    s8b:'Toca <b>Comprobar mi conexión</b> arriba. Asegúrate de que Tailscale esté en ON, revisa tu internet y reinicia la app. ¿Sigue fallando? Escríbeme.',
+    reset:'Reiniciar la lista',
+    footer:'Tailscale tiene que estar en ON para que Ver ahora funcione. ¡Disfruta las películas!',
+    creditsIntro:'Pinturas de John Bauer (sueco, falleció en 1918), dominio público, a través de Wikimedia Commons:',
+    altHero:'La Comarca de noche, con casas iluminadas bajo la luna llena',
+    altCottage:'Una cabaña pequeña con ventanas iluminadas al pie de una montaña oscura, de John Bauer',
+    altGate:'Una gran puerta de madera en la pared de una montaña, de John Bauer',
+    altTuvstarr:'Una niña arrodillada junto a un estanque oscuro en el bosque, de John Bauer'
+  }
+};
 const tabs=document.querySelectorAll('.tab');
+let lang='en';
+function t(){return I18N[lang]||I18N.en}
+function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 function current(){return document.querySelector('ol.steps:not([hidden])')}
 function progress(){
   const boxes=current().querySelectorAll('input[data-k]'),n=[...boxes].filter(c=>c.checked).length;
-  document.getElementById('pct').textContent=n+' of '+boxes.length;
+  document.getElementById('pct').textContent=t().progress.replace('{n}',n).replace('{total}',boxes.length);
   document.getElementById('bar').style.width=(100*n/boxes.length)+'%';
 }
-function show(t){
-  tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.t===t));
-  ['android','iphone'].forEach(id=>document.getElementById(id).hidden=id!==t);
-  try{localStorage.setItem('fmn-tab',t)}catch(e){}
+function applyLang(next){
+  lang=next==='es'?'es':'en';
+  const d=t();
+  document.documentElement.lang=lang;
+  document.title=d.title;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(d[k]!=null)el.innerHTML=d[k]});
+  document.querySelectorAll('[data-i18n-alt]').forEach(el=>{const k=el.getAttribute('data-i18n-alt');if(d[k]!=null)el.alt=d[k]});
+  document.querySelectorAll('[data-i18n-aria]').forEach(el=>{const k=el.getAttribute('data-i18n-aria');if(d[k]!=null)el.setAttribute('aria-label',d[k])});
+  document.querySelectorAll('.lang-switch button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+  set('fmn-lang',lang);
   progress();
 }
-function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
-function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function defaultLang(){
+  const saved=get('fmn-lang');
+  if(saved==='es'||saved==='en')return saved;
+  const nav=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+  return nav.indexOf('es')===0?'es':'en';
+}
+function show(tab){
+  tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.t===tab));
+  ['android','iphone'].forEach(id=>document.getElementById(id).hidden=id!==tab);
+  set('fmn-tab',tab);
+  progress();
+}
 tabs.forEach(b=>b.onclick=()=>show(b.dataset.t));
+document.querySelectorAll('.lang-switch button').forEach(b=>b.onclick=()=>applyLang(b.dataset.lang));
 document.querySelectorAll('input[data-k]').forEach(c=>{
   const k='fmn-'+c.dataset.k,li=c.closest('li');
   c.checked=get(k)==='1';li.classList.toggle('done',c.checked);
   c.onchange=()=>{set(k,c.checked?'1':'0');li.classList.toggle('done',c.checked);progress()};
 });
+applyLang(defaultLang());
 show(get('fmn-tab')||(/iPhone|iPad/.test(navigator.userAgent)?'iphone':'android'));
 document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{
   try{await navigator.clipboard.writeText(ADDR)}catch(e){const x=document.createElement('textarea');x.value=ADDR;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove()}
-  b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy address',2000);
+  b.textContent=t().copied;setTimeout(()=>{b.textContent=t().copy},2000);
 });
 document.getElementById('reset').onclick=()=>{document.querySelectorAll('input[data-k]').forEach(c=>{c.checked=false;c.onchange()})};
 </script>
