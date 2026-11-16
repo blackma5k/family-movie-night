@@ -4,14 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#08110f">
+<meta name="theme-color" content="#0f1410">
 <title>Movie Night in the Shire</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="style.css?v=20261115b">
 </head>
 <body>
+<header class="fellowship-banner">
+  <img src="art/fellowship-ridge.jpg?v=20261115b" width="1080" height="531" data-i18n-alt="altFellowship" alt="The Fellowship walking along a mountain ridge under a golden sky">
+</header>
 <main>
 <article class="page">
 
@@ -21,7 +24,6 @@
   <button type="button" data-lang="es" aria-pressed="false">Español</button>
 </nav>
 
-<figure class="painting hero"><img src="art/shire-night.png" width="1600" height="900" data-i18n-alt="altHero" alt="The Shire at night with glowing homes under a full moon"></figure>
 <p class="eyebrow" data-i18n="eyebrow">Family movie night</p>
 <h1 data-i18n="h1">Movie Night in the Shire</h1>
 <p class="lede" data-i18n="lede">Movies and shows from my server, just for family.</p>
@@ -38,10 +40,23 @@
 
 <p class="scroll" data-i18n="inviteNote"><b>Invite only.</b> Ask me for an invite first. <b>Tailscale has to be ON</b> or nothing works. If the connection check page turns green, you're good.</p>
 
+<section class="shire-welcome">
+  <figure class="painting hero"><img src="art/shire-night.png" width="1600" height="900" data-i18n-alt="altHero" alt="The Shire at night with glowing homes under a full moon"></figure>
+  <h2 data-i18n="shireWelcome">Welcome to the Shire</h2>
+  <p data-i18n="shireWelcomeSub">Movie night at home — the lights are on in the hill.</p>
+</section>
+
 <figure class="painting banner"><img src="art/bauer-cottage.jpg" width="1100" height="554" data-i18n-alt="altCottage" alt="A small cottage with lit windows at the foot of a dark mountain, by John Bauer" loading="lazy"></figure>
 
-<h2 data-i18n="h2">How to Set It Up</h2>
-<p class="h2-sub" data-i18n="h2sub">8 quick steps. Check them off as you go.</p>
+<section class="argonath">
+  <figure class="argonath-art">
+    <img src="art/argonath.jpg?v=20261115b" width="800" height="1012" data-i18n-alt="altArgonath" alt="Pencil sketch of the Argonath, two giant stone kings with raised hands and boats on the river below" loading="lazy">
+  </figure>
+  <div class="argonath-copy">
+    <h2 data-i18n="h2">How to Set It Up</h2>
+    <p class="h2-sub" data-i18n="h2sub">8 quick steps. Check them off as you go.</p>
+  </div>
+</section>
 
 <div class="tabs" role="tablist" data-i18n-aria="tabsLabel" aria-label="Pick your phone">
   <button class="tab" role="tab" data-t="android" aria-selected="true">Android</button>
@@ -106,6 +121,8 @@ const I18N={
     eyebrow:'Family movie night',
     h1:'Movie Night in the Shire',
     lede:'Movies and shows from my server, just for family.',
+    shireWelcome:'Welcome to the Shire',
+    shireWelcomeSub:'Movie night at home — the lights are on in the hill.',
     openJellyfin:'Open Jellyfin',
     watchNow:'Watch Now',
     checkBtn:'Check my connection',
@@ -142,7 +159,9 @@ const I18N={
     altHero:'The Shire at night with glowing homes under a full moon',
     altCottage:'A small cottage with lit windows at the foot of a dark mountain, by John Bauer',
     altGate:'A big wooden door in a mountain wall, by John Bauer',
-    altTuvstarr:'A girl kneeling by a dark forest pool, by John Bauer'
+    altTuvstarr:'A girl kneeling by a dark forest pool, by John Bauer',
+    altFellowship:'The Fellowship walking along a mountain ridge under a golden sky',
+    altArgonath:'Pencil sketch of the Argonath, two giant stone kings with raised hands and boats on the river below'
   },
   es:{
     title:'Noche de cine en la Comarca',
@@ -150,6 +169,8 @@ const I18N={
     eyebrow:'Noche de cine en familia',
     h1:'Noche de cine en la Comarca',
     lede:'Películas y series de mi servidor, solo para la familia.',
+    shireWelcome:'Bienvenidos a la Comarca',
+    shireWelcomeSub:'Noche de cine en casa: las luces están encendidas en la colina.',
     openJellyfin:'Abrir Jellyfin',
     watchNow:'Ver ahora',
     checkBtn:'Comprobar mi conexión',
@@ -186,7 +207,9 @@ const I18N={
     altHero:'La Comarca de noche, con casas iluminadas bajo la luna llena',
     altCottage:'Una cabaña pequeña con ventanas iluminadas al pie de una montaña oscura, de John Bauer',
     altGate:'Una gran puerta de madera en la pared de una montaña, de John Bauer',
-    altTuvstarr:'Una niña arrodillada junto a un estanque oscuro en el bosque, de John Bauer'
+    altTuvstarr:'Una niña arrodillada junto a un estanque oscuro en el bosque, de John Bauer',
+    altFellowship:'La Comunidad del Anillo caminando por una cresta bajo un cielo dorado',
+    altArgonath:'Boceto a lápiz de los Argonath, dos reyes de piedra gigantes con las manos en alto y barcas en el río'
   }
 };
 const tabs=document.querySelectorAll('.tab');
